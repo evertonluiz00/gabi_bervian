@@ -45,6 +45,16 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
 
   prevBtn.addEventListener('click', () => goTo(index - 1));
   nextBtn.addEventListener('click', () => goTo(index + 1));
+
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    const deltaX = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(deltaX) > 40) goTo(index + (deltaX < 0 ? 1 : -1));
+  });
 });
 
 // Project image viewer (lightbox)

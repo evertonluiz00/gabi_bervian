@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabi Bervian | Interior Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <span class="navbar__logo-mark"><img src="images/logo_black.png" alt="Gabi Bervian"></span>
+        <span>GABI BERVIAN</span>
+      </a>
+      <nav class="navbar__menu" id="navMenu">
+        <a href="#about">About Me</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="background-image: url('images/living_dining.png');">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__name">GABI BERVIAN</h1>
+      <p class="hero__title">Interior Designer</p>
+      <p class="hero__tagline">Designing spaces with precision. Creating homes with soul.</p>
+      <div class="hero__divider"></div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Rolar para baixo">&#8595; Scroll</a>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__image">
+        <div class="about__image-accent"></div>
+        <img src="images/gabi_bervian_profile.png" alt="Gabi Bervian">
+      </div>
+      <div class="about__text">
+        <span class="section-tag">About Me</span>
+        <h2>Vision &amp; Reality, Beautifully Connected</h2>
+        <div class="section-line"></div>
+        <p>I am an Interior Designer dedicated to transforming ideas into spaces that are not only beautiful, but
+          meaningful, functional, and deeply connected to the people who experience them. Inspired by the principles of
+          Neuroarchitecture, my work explores how thoughtful design decisions can influence emotions, well-being, and
+          the way we live within a space.</p>
+        <p>I collaborate with interior design studios and creative teams to bridge the journey between vision and
+          reality — turning concepts into detailed, organized, and buildable solutions. My role is to bring clarity to
+          the design process, ensuring that every element, from the overall atmosphere to the smallest detail, is
+          carefully considered and intentionally developed.</p>
+        <p>With a strong foundation in technical detailing and visual storytelling, I create precise design
+          documentation and realistic visual experiences that allow each project to be understood, refined, and brought
+          to life with confidence.</p>
+        <p>Balancing creativity, technical expertise, and a human-centered perspective, I believe exceptional interiors
+          are created when beautiful ideas are supported by thoughtful execution — resulting in spaces that truly
+          reflect the people they are designed for.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <span class="section-tag section-tag--center">What I Do</span>
+    <h2 class="section-title">Services</h2>
+    <div class="section-line section-line--center"></div>
+
+    <div class="carousel carousel--service" data-carousel>
+      <div class="carousel__track">
+
+        <div class="carousel__slide service-slide" style="background-image: url('images/services/ffe.png');">
+          <div class="service-slide__overlay"></div>
+          <div class="service-slide__content">
+            <h3>FF&amp;E</h3>
+            <p>Furniture, Fixtures &amp; Equipment — curated selections that align with each project's aesthetic vision,
+              budget, and functional needs. From mood boards to detailed specification sheets.</p>
+          </div>
+        </div>
+
+        <div class="carousel__slide service-slide"
+          style="background-image: url('images/services/constructions_documents.png');">
+          <div class="service-slide__overlay"></div>
+          <div class="service-slide__content">
+            <h3>Construction Documents</h3>
+            <p>Precise technical drawings and documentation — floor plans, elevations, reflected ceiling plans, millwork
+              details — that bring clarity and confidence to every stage of the build.</p>
+          </div>
+        </div>
+
+        <div class="carousel__slide service-slide"
+          style="background-image: url('images/services/3d_visualization.png');">
+          <div class="service-slide__overlay"></div>
+          <div class="service-slide__content">
+            <h3>3D Visualization</h3>
+            <p>Realistic three-dimensional models that transform concepts into immersive spatial experiences — allowing
+              clients and teams to fully explore the design before construction begins.</p>
+          </div>
+        </div>
+
+        <div class="carousel__slide service-slide" style="background-image: url('images/services/render_varanda.png');">
+          <div class="service-slide__overlay"></div>
+          <div class="service-slide__content">
+            <h3>Render</h3>
+            <p>High-quality photorealistic renderings that communicate the final atmosphere and materiality of a space
+              with stunning precision — a powerful tool for presentations and client approvals.</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="Anterior">&#8249;</button>
+      <button class="carousel__arrow carousel__arrow--next" data-next aria-label="Próximo">&#8250;</button>
+      <div class="carousel__dots" data-dots></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <span class="section-tag section-tag--center">Portfolio</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line section-line--center"></div>
+
+    <div class="carousel carousel--projects" data-carousel>
+      <div class="carousel__track">
+
+        <!-- KITCHEN -->
+        <div class="carousel__slide">
+          <article class="project-card" data-project tabindex="0" role="button"
+            aria-label="Ver galeria: The Modern Heritage Kitchen"
+            data-images='[
+              {"src":"images/projects/kitchen/04_kitchen_gallery.png","alt":"The Modern Heritage Kitchen"},
+              {"src":"images/projects/kitchen/03_kitchen_concept_moodboard.png","alt":"Kitchen concept moodboard"},
+              {"src":"images/projects/kitchen/05_kitchen_floorplan.png","alt":"Kitchen floor plan"},
+              {"src":"images/projects/kitchen/06_kitchen_elevation01_millwork_ffe.png","alt":"Kitchen elevation 01"},
+              {"src":"images/projects/kitchen/07_kitchen_elevation02_millwork_ffe.png","alt":"Kitchen elevation 02"},
+              {"src":"images/projects/kitchen/08_kitchen_island_millwork_specs.png","alt":"Kitchen island millwork specs"},
+              {"src":"images/projects/kitchen/09_kitchen_isometric_ffe.png","alt":"Kitchen isometric view"}
+            ]' style="background-image: url('images/projects/kitchen/04_kitchen_gallery.png');">
+            <div class="project-card__overlay"></div>
+            <div class="project-card__content">
+              <h3>The Modern Heritage Kitchen</h3>
+              <p>Designed for a vibrant family lifestyle, this kitchen strikes a balance between classic architectural
+                details and modern functionality, featuring a generous island and integrated high-end appliances.</p>
+              <button class="project-card__btn" type="button" data-view-gallery>View Gallery</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- BEDROOM -->
+        <div class="carousel__slide">
+          <article class="project-card" data-project tabindex="0" role="button"
+            aria-label="Ver galeria: Serene Primary Suite"
+            data-images='[
+              {"src":"images/projects/bedroom/10_bedroom_quiet_luxury_intro.png","alt":"Serene Primary Suite"},
+              {"src":"images/projects/bedroom/11_bedroom_moodboard.png","alt":"Bedroom moodboard"},
+              {"src":"images/projects/bedroom/12_bedroom_floorplan.png","alt":"Bedroom floor plan"},
+              {"src":"images/projects/bedroom/13_bedroom_reflected_ceiling_plan.png","alt":"Bedroom reflected ceiling plan"},
+              {"src":"images/projects/bedroom/14_bedroom_lighting_plan.png","alt":"Bedroom lighting plan"},
+              {"src":"images/projects/bedroom/15_bedroom_elevations_millwork.png","alt":"Bedroom elevations"},
+              {"src":"images/projects/bedroom/16_bedroom_nightstand_millwork_specs.png","alt":"Nightstand millwork specs"},
+              {"src":"images/projects/bedroom/17_bedroom_closet_millwork_specs.png","alt":"Closet millwork specs"}
+            ]' style="background-image: url('images/projects/bedroom/10_bedroom_quiet_luxury_intro.png');">
+            <div class="project-card__overlay"></div>
+            <div class="project-card__content">
+              <h3>Serene Primary Suite</h3>
+              <p>A sophisticated, calming retreat pairing classic millwork with clean, contemporary lines — warm neutral
+                tones, rich wood accents and layered lighting create an inviting, elegant atmosphere.</p>
+              <button class="project-card__btn" type="button" data-view-gallery>View Gallery</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- BATHROOM -->
+        <div class="carousel__slide">
+          <article class="project-card" data-project tabindex="0" role="button"
+            aria-label="Ver galeria: The Contemporary Wellness Bathroom"
+            data-images='[
+              {"src":"images/projects/bathroom/18_bathroom_gallery.png","alt":"The Contemporary Wellness Bathroom"},
+              {"src":"images/projects/bathroom/19_bathroom_color_palette.png","alt":"Bathroom color palette"},
+              {"src":"images/projects/bathroom/20_bathroom_floorplan.png","alt":"Bathroom floor plan"},
+              {"src":"images/projects/bathroom/21_bathroom_elevation01_ffe.png","alt":"Bathroom elevation 01"},
+              {"src":"images/projects/bathroom/22_bathroom_elevation02_ffe.png","alt":"Bathroom elevation 02"},
+              {"src":"images/projects/bathroom/23_bathroom_elevation03_ffe.png","alt":"Bathroom elevation 03"},
+              {"src":"images/projects/bathroom/24_bathroom_elevation04_ffe.png","alt":"Bathroom elevation 04"},
+              {"src":"images/projects/bathroom/25_bathroom_isometric01_ffe.png","alt":"Bathroom isometric view 01"},
+              {"src":"images/projects/bathroom/26_bathroom_isometric02_ffe.png","alt":"Bathroom isometric view 02"}
+            ]' style="background-image: url('images/projects/bathroom/18_bathroom_gallery.png');">
+            <div class="project-card__overlay"></div>
+            <div class="project-card__content">
+              <h3>The Contemporary Wellness Bathroom</h3>
+              <p>A spa-like retreat that prioritizes wellness and visual quietude through a soft, monochromatic palette and
+                natural white oak textures, balanced by arched mirrors and integrated niche lighting.</p>
+              <button class="project-card__btn" type="button" data-view-gallery>View Gallery</button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="Anterior">&#8249;</button>
+      <button class="carousel__arrow carousel__arrow--next" data-next aria-label="Próximo">&#8250;</button>
+      <div class="carousel__dots" data-dots></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <span class="section-tag section-tag--center">Get In Touch</span>
+    <h2 class="section-title">Let's Create Together</h2>
+    <div class="section-line section-line--center"></div>
+    <div class="contact__links">
+      <a class="contact__link" href="https://www.instagram.com/gabibervian.design" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+        @gabibervian.design
+      </a>
+      <a class="contact__link" href="https://www.linkedin.com/in/gabibervian" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+        gabibervian
+      </a>
+      <a class="contact__link" href="mailto:contato@gabibervian.design">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+        contato@gabibervian.design
+      </a>
+    </div>
+    <p class="contact__sub">Available for freelance collaborations &amp; design partnerships worldwide.</p>
+  </section>
+
+  <!-- PROJECT IMAGE VIEWER -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+    <div class="lightbox__stage">
+      <img id="lightboxImg" src="" alt="">
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+      <span class="lightbox__counter" id="lightboxCounter"></span>
+    </div>
+    <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Próximo">&#8250;</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

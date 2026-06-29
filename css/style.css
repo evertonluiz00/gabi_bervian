@@ -4,12 +4,10 @@
    Type: Cinzel (titles) | Poppins (body) | Amsterdam One (hero tagline)
    ========================================================================== */
 
-/* Amsterdam One is not distributed on Google Fonts.
-   Drop the licensed font file at fonts/AmsterdamOne.woff2 to enable it;
-   the stack below falls back to an elegant cursive otherwise. */
 @font-face {
   font-family: 'Amsterdam One';
-  src: url('../fonts/AmsterdamOne.woff2') format('woff2');
+  src: url('../fonts/AmsterdamOne400.ttf') format('truetype');
+  font-weight: 400;
   font-display: swap;
 }
 
@@ -629,4 +627,5 @@ a { text-decoration: none; color: inherit; }
   .lightbox { padding: 1rem; }
   .lightbox__arrow { width: 38px; height: 38px; font-size: 1.3rem; margin: 0 0.6rem; }
   .lightbox__close { top: 0.7rem; right: 0.9rem; font-size: 1.8rem; }
+  .carousel__arrow { width: 42px; height: 42px; font-size: 1.4rem; }
 }

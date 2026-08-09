@@ -106,47 +106,6 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('is-scrolled', window.scrollY > 20);
 });
 
-// Project carousels
-document.querySelectorAll('[data-carousel]').forEach(carousel => {
-  const track = carousel.querySelector('.carousel__track');
-  const slides = Array.from(track.children);
-  const dotsWrap = carousel.querySelector('[data-dots]');
-  const prevBtn = carousel.querySelector('[data-prev]');
-  const nextBtn = carousel.querySelector('[data-next]');
-  let index = 0;
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    if (i === 0) dot.classList.add('is-active');
-    dot.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(dot);
-  });
-  const dots = Array.from(dotsWrap.children);
-
-  function update() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
-  }
-
-  function goTo(i) {
-    index = (i + slides.length) % slides.length;
-    update();
-  }
-
-  prevBtn.addEventListener('click', () => goTo(index - 1));
-  nextBtn.addEventListener('click', () => goTo(index + 1));
-
-  let touchStartX = 0;
-  track.addEventListener('touchstart', e => {
-    touchStartX = e.touches[0].clientX;
-  }, { passive: true });
-
-  track.addEventListener('touchend', e => {
-    const deltaX = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(deltaX) > 40) goTo(index + (deltaX < 0 ? 1 : -1));
-  });
-});
-
 // Project image viewer (lightbox)
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');

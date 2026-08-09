@@ -26,6 +26,7 @@ const translations = {
       + 'truly reflect the people they are designed for.',
     'services.tag': 'What I Do',
     'services.title': 'Services',
+    'services.ffeTitle': 'FF&E',
     'services.ffe': 'Furniture, Fixtures & Equipment — curated selections that align with each project\'s aesthetic '
       + 'vision, budget, and functional needs. From mood boards to detailed specification sheets.',
     'services.constructionTitle': 'Construction Documents',
@@ -36,6 +37,8 @@ const translations = {
       + '— allowing clients and teams to fully explore the design before construction begins.',
     'projects.tag': 'Portfolio',
     'projects.title': 'Projects',
+    'contact.instagram': '@gabibervian.design',
+    'contact.instagramUrl': 'https://www.instagram.com/gabibervian.design',
     'contact.tag': 'Get In Touch',
     'contact.title': 'Let\'s Create Together',
     'contact.sub': 'Available for freelance collaborations & design partnerships worldwide.',
@@ -56,6 +59,12 @@ document.querySelectorAll('[data-i18n-html]').forEach(el => {
   originalTexts.set(el, { key: el.dataset.i18nHtml, html: true, value: el.innerHTML });
 });
 
+// links whose destination changes with the language (e.g. the Instagram profile)
+const originalHrefs = new Map();
+document.querySelectorAll('[data-i18n-href]').forEach(el => {
+  originalHrefs.set(el, { key: el.dataset.i18nHref, value: el.getAttribute('href') });
+});
+
 function applyLanguage(lang) {
   originalTexts.forEach((original, el) => {
     if (lang === 'pt') {
@@ -67,6 +76,11 @@ function applyLanguage(lang) {
       if (original.html) el.innerHTML = translated;
       else el.textContent = translated;
     }
+  });
+
+  originalHrefs.forEach((original, el) => {
+    const href = lang === 'pt' ? original.value : translations[lang][original.key];
+    if (href !== undefined) el.setAttribute('href', href);
   });
 
   document.title = lang === 'pt' ? originalTitle : (translations[lang]['title'] || originalTitle);

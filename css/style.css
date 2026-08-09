@@ -142,6 +142,47 @@ a { text-decoration: none; color: inherit; }
   color: var(--navy);
 }
 
+.navbar__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  padding: 6px 12px;
+  margin-left: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar__lang:hover {
+  background: var(--navy);
+  color: var(--off-white);
+}
+
+/* only the flag of the language the button switches to is shown */
+.navbar__lang-flag {
+  display: none;
+  flex: none;
+  width: 18px;
+  height: 13px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(11, 31, 51, 0.2);
+}
+
+.navbar__lang[data-target="en"] .navbar__lang-flag--us,
+.navbar__lang[data-target="pt"] .navbar__lang-flag--br {
+  display: block;
+}
+
+.navbar__lang:hover .navbar__lang-flag {
+  box-shadow: 0 0 0 1px rgba(247, 247, 247, 0.35);
+}
+
 .navbar__toggle {
   display: none;
   flex-direction: column;

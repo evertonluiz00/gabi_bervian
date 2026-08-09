@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabi Bervian | Interior Designer</title>
+  <title>Gabi Bervian | Designer de Interiores</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -23,11 +23,57 @@
         <span>GABI BERVIAN</span>
       </a>
       <nav class="navbar__menu" id="navMenu">
-        <a href="#about">About Me</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">Sobre Mim</a>
+        <a href="#services" data-i18n="nav.services">Serviços</a>
+        <a href="#projects" data-i18n="nav.projects">Projetos</a>
+        <a href="#contact" data-i18n="nav.contact">Contato</a>
       </nav>
+      <button class="navbar__lang" id="langToggle" type="button" data-target="en"
+        aria-label="Ver site em inglês">
+        <svg class="navbar__lang-flag navbar__lang-flag--br" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+          <clipPath id="flagBrGlobe">
+            <circle cx="14" cy="10" r="4.4" />
+          </clipPath>
+          <rect width="28" height="20" rx="2" fill="#009B3A" />
+          <path d="M14 2.6 25.4 10 14 17.4 2.6 10Z" fill="#FEDF00" />
+          <circle cx="14" cy="10" r="4.4" fill="#002776" />
+          <path d="M9.2 9.1Q14 13.6 18.9 9.3" fill="none" stroke="#FFFFFF" stroke-width="1.5"
+            clip-path="url(#flagBrGlobe)" />
+        </svg>
+        <svg class="navbar__lang-flag navbar__lang-flag--us" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+          <clipPath id="flagUsFrame">
+            <rect width="28" height="20" rx="2" />
+          </clipPath>
+          <g clip-path="url(#flagUsFrame)">
+            <rect width="28" height="20" fill="#FFFFFF" />
+            <g fill="#B22234">
+              <rect y="0" width="28" height="1.54" />
+              <rect y="3.08" width="28" height="1.54" />
+              <rect y="6.15" width="28" height="1.54" />
+              <rect y="9.23" width="28" height="1.54" />
+              <rect y="12.31" width="28" height="1.54" />
+              <rect y="15.38" width="28" height="1.54" />
+              <rect y="18.46" width="28" height="1.54" />
+            </g>
+            <rect width="11.9" height="10.77" fill="#3C3B6E" />
+            <g fill="#FFFFFF">
+              <circle cx="2" cy="1.8" r="0.55" />
+              <circle cx="5.3" cy="1.8" r="0.55" />
+              <circle cx="8.6" cy="1.8" r="0.55" />
+              <circle cx="3.65" cy="4.1" r="0.55" />
+              <circle cx="6.95" cy="4.1" r="0.55" />
+              <circle cx="10.25" cy="4.1" r="0.55" />
+              <circle cx="2" cy="6.4" r="0.55" />
+              <circle cx="5.3" cy="6.4" r="0.55" />
+              <circle cx="8.6" cy="6.4" r="0.55" />
+              <circle cx="3.65" cy="8.7" r="0.55" />
+              <circle cx="6.95" cy="8.7" r="0.55" />
+              <circle cx="10.25" cy="8.7" r="0.55" />
+            </g>
+          </g>
+        </svg>
+        <span class="navbar__lang-code" id="langToggleCode">EN</span>
+      </button>
       <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -39,11 +85,11 @@
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <h1 class="hero__name">GABI BERVIAN</h1>
-      <p class="hero__title">Interior Designer</p>
-      <p class="hero__tagline">Designing spaces with precision.<br> Creating homes with soul.</p>
+      <p class="hero__title" data-i18n="hero.title">Designer de Interiores</p>
+      <p class="hero__tagline" data-i18n-html="hero.tagline">Projetando espaços com precisão.<br> Criando lares com alma.</p>
       <div class="hero__divider"></div>
     </div>
-    <a href="#about" class="hero__scroll" aria-label="Rolar para baixo">&#8595; Scroll</a>
+    <a href="#about" class="hero__scroll" aria-label="Rolar para baixo"><span data-i18n-html="hero.scroll">&#8595; Rolar</span></a>
   </section>
 
   <!-- ABOUT ME -->
@@ -54,31 +100,31 @@
         <img src="images/gabi_bervian_profile.png" alt="Gabi Bervian">
       </div>
       <div class="about__text">
-        <span class="section-tag">About Me</span>
-        <h2>Bringing ideas into buildable reality</h2>
+        <span class="section-tag" data-i18n="about.tag">Sobre Mim</span>
+        <h2 data-i18n="about.title">Transformando ideias em realidade construível</h2>
         <div class="section-line"></div>
-        <p>I am an Interior Designer dedicated to transforming ideas into spaces that are not only beautiful, but
-          meaningful, functional, and deeply connected to the people who experience them. Inspired by the principles of
-          Neuroarchitecture, my work explores how thoughtful design decisions can influence emotions, well-being, and
-          the way we live within a space.</p>
-        <p>I collaborate with interior design studios and creative teams to bridge the journey between vision and
-          reality — turning concepts into detailed, organized, and buildable solutions. My role is to bring clarity to
-          the design process, ensuring that every element, from the overall atmosphere to the smallest detail, is
-          carefully considered and intentionally developed.</p>
-        <p>With a strong foundation in technical detailing and visual storytelling, I create precise design
-          documentation and realistic visual experiences that allow each project to be understood, refined, and brought
-          to life with confidence.</p>
-        <p>Balancing creativity, technical expertise, and a human-centered perspective, I believe exceptional interiors
-          are created when beautiful ideas are supported by thoughtful execution — resulting in spaces that truly
-          reflect the people they are designed for.</p>
+        <p data-i18n="about.p1">Sou uma Designer de Interiores dedicada a transformar ideias em espaços não apenas bonitos, mas
+          significativos, funcionais e profundamente conectados às pessoas que os vivenciam. Inspirado pelos princípios
+          da Neuroarquitetura, meu trabalho explora como decisões de design bem pensadas podem influenciar emoções,
+          bem-estar e o modo como vivemos dentro de um espaço.</p>
+        <p data-i18n="about.p2">Colaboro com estúdios de design de interiores e equipes criativas para conectar a jornada entre a visão e
+          a realidade — transformando conceitos em soluções detalhadas, organizadas e construíveis. Meu papel é trazer
+          clareza ao processo de design, garantindo que cada elemento, da atmosfera geral ao menor detalhe, seja
+          cuidadosamente considerado e intencionalmente desenvolvido.</p>
+        <p data-i18n="about.p3">Com uma base sólida em detalhamento técnico e narrativa visual, crio documentações de design precisas e
+          experiências visuais realistas que permitem que cada projeto seja compreendido, refinado e trazido à vida com
+          confiança.</p>
+        <p data-i18n="about.p4">Equilibrando criatividade, expertise técnica e uma perspectiva centrada no ser humano, acredito que
+          interiores excepcionais nascem quando ideias bonitas são sustentadas por uma execução cuidadosa — resultando
+          em espaços que realmente refletem as pessoas para quem foram projetados.</p>
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section class="services" id="services">
-    <span class="section-tag section-tag--center">What I Do</span>
-    <h2 class="section-title">Services</h2>
+    <span class="section-tag section-tag--center" data-i18n="services.tag">O Que Eu Faço</span>
+    <h2 class="section-title" data-i18n="services.title">Serviços</h2>
     <div class="section-line section-line--center"></div>
 
     <div class="carousel carousel--service" data-carousel>
@@ -88,8 +134,8 @@
           <div class="service-slide__overlay"></div>
           <div class="service-slide__content">
             <h3>FF&amp;E</h3>
-            <p>Furniture, Fixtures &amp; Equipment — curated selections that align with each project's aesthetic vision,
-              budget, and functional needs. From mood boards to detailed specification sheets.</p>
+            <p data-i18n="services.ffe">Móveis, Acessórios e Equipamentos — seleções curadas alinhadas à visão estética, orçamento e
+              necessidades funcionais de cada projeto. De moodboards a planilhas de especificação detalhadas.</p>
           </div>
         </div>
 
@@ -97,9 +143,9 @@
           style="background-image: url('images/services/constructions_documents.png');">
           <div class="service-slide__overlay"></div>
           <div class="service-slide__content">
-            <h3>Construction Documents</h3>
-            <p>Precise technical drawings and documentation — floor plans, elevations, reflected ceiling plans, millwork
-              details — that bring clarity and confidence to every stage of the build.</p>
+            <h3 data-i18n="services.constructionTitle">Documentos de Construção</h3>
+            <p data-i18n="services.construction">Desenhos técnicos e documentação precisos — plantas baixas, elevações, planos de forro refletido,
+              detalhes de marcenaria — que trazem clareza e confiança a cada etapa da obra.</p>
           </div>
         </div>
 
@@ -107,9 +153,9 @@
           style="background-image: url('images/services/3d_visualization.png');">
           <div class="service-slide__overlay"></div>
           <div class="service-slide__content">
-            <h3>3D Visualization</h3>
-            <p>Realistic three-dimensional models that transform concepts into immersive spatial experiences — allowing
-              clients and teams to fully explore the design before construction begins.</p>
+            <h3 data-i18n="services.vizTitle">Visualização 3D</h3>
+            <p data-i18n="services.viz">Modelos tridimensionais realistas que transformam conceitos em experiências espaciais imersivas —
+              permitindo que clientes e equipes explorem totalmente o design antes do início da construção.</p>
           </div>
         </div>
 
@@ -122,8 +168,8 @@
 
   <!-- PROJECTS -->
   <section class="projects" id="projects">
-    <span class="section-tag section-tag--center">Portfolio</span>
-    <h2 class="section-title">Projects</h2>
+    <span class="section-tag section-tag--center" data-i18n="projects.tag">Portfólio</span>
+    <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
     <div class="section-line section-line--center"></div>
 
     <div class="carousel carousel--projects" data-carousel>
@@ -132,7 +178,7 @@
         <!-- KITCHEN -->
         <div class="carousel__slide">
           <article class="project-card" data-project tabindex="0" role="button"
-            aria-label="Ver galeria: The Modern Heritage Kitchen" data-images='[
+            aria-label="Ver galeria: A Cozinha Moderna com Herança" data-images='[
               {"src":"images/projects/kitchen/04_kitchen_gallery.png","alt":"The Modern Heritage Kitchen"},
               {"src":"images/projects/kitchen/03_kitchen_concept_moodboard.png","alt":"Kitchen concept moodboard"},
               {"src":"images/projects/kitchen/05_kitchen_floorplan.png","alt":"Kitchen floor plan"},
@@ -143,10 +189,11 @@
             ]' style="background-image: url('images/projects/kitchen/project_kitchen_cover.png');">
             <div class="project-card__overlay"></div>
             <div class="project-card__content">
-              <h3>The Modern Heritage Kitchen</h3>
-              <p>Designed for a vibrant family lifestyle, this kitchen strikes a balance between classic architectural
-                details and modern functionality, featuring a generous island and integrated high-end appliances.</p>
-              <button class="project-card__btn" type="button" data-view-gallery>View Gallery</button>
+              <h3 data-i18n="projects.kitchen.title">A Cozinha Moderna com Herança</h3>
+              <p data-i18n="projects.kitchen.desc">Projetada para um estilo de vida familiar vibrante, esta cozinha equilibra detalhes arquitetônicos
+                clássicos com funcionalidade moderna, com uma ilha generosa e eletrodomésticos integrados de alto
+                padrão.</p>
+              <button class="project-card__btn" type="button" data-view-gallery data-i18n="projects.viewGallery">Ver Galeria</button>
             </div>
           </article>
         </div>
@@ -154,7 +201,7 @@
         <!-- BEDROOM -->
         <div class="carousel__slide">
           <article class="project-card" data-project tabindex="0" role="button"
-            aria-label="Ver galeria: Serene Primary Suite" data-images='[
+            aria-label="Ver galeria: Suíte Principal Serena" data-images='[
               {"src":"images/projects/bedroom/10_bedroom_quiet_luxury_intro.png","alt":"Serene Primary Suite"},
               {"src":"images/projects/bedroom/11_bedroom_moodboard.png","alt":"Bedroom moodboard"},
               {"src":"images/projects/bedroom/12_bedroom_floorplan.png","alt":"Bedroom floor plan"},
@@ -166,10 +213,11 @@
             ]' style="background-image: url('images/projects/bedroom/project_bedroom_cover.png');">
             <div class="project-card__overlay"></div>
             <div class="project-card__content">
-              <h3>Serene Primary Suite</h3>
-              <p>A sophisticated, calming retreat pairing classic millwork with clean, contemporary lines — warm neutral
-                tones, rich wood accents and layered lighting create an inviting, elegant atmosphere.</p>
-              <button class="project-card__btn" type="button" data-view-gallery>View Gallery</button>
+              <h3 data-i18n="projects.bedroom.title">Suíte Principal Serena</h3>
+              <p data-i18n="projects.bedroom.desc">Um refúgio sofisticado e tranquilo que combina marcenaria clássica com linhas contemporâneas e limpas —
+                tons neutros e quentes, acabamentos em madeira ricos e iluminação em camadas criam uma atmosfera
+                acolhedora e elegante.</p>
+              <button class="project-card__btn" type="button" data-view-gallery data-i18n="projects.viewGallery">Ver Galeria</button>
             </div>
           </article>
         </div>
@@ -177,7 +225,7 @@
         <!-- BATHROOM -->
         <div class="carousel__slide">
           <article class="project-card" data-project tabindex="0" role="button"
-            aria-label="Ver galeria: The Contemporary Wellness Bathroom" data-images='[
+            aria-label="Ver galeria: O Banheiro Contemporâneo do Bem-Estar" data-images='[
               {"src":"images/projects/bathroom/18_bathroom_gallery.png","alt":"The Contemporary Wellness Bathroom"},
               {"src":"images/projects/bathroom/19_bathroom_color_palette.png","alt":"Bathroom color palette"},
               {"src":"images/projects/bathroom/20_bathroom_floorplan.png","alt":"Bathroom floor plan"},
@@ -190,11 +238,11 @@
             ]' style="background-image: url('images/projects/bathroom/project_bathroom_cover.png');">
             <div class="project-card__overlay"></div>
             <div class="project-card__content">
-              <h3>The Contemporary Wellness Bathroom</h3>
-              <p>A spa-like retreat that prioritizes wellness and visual quietude through a soft, monochromatic palette
-                and
-                natural white oak textures, balanced by arched mirrors and integrated niche lighting.</p>
-              <button class="project-card__btn" type="button" data-view-gallery>View Gallery</button>
+              <h3 data-i18n="projects.bathroom.title">O Banheiro Contemporâneo do Bem-Estar</h3>
+              <p data-i18n="projects.bathroom.desc">Um refúgio inspirado em spa que prioriza o bem-estar e a quietude visual por meio de uma paleta suave e
+                monocromática e texturas naturais de carvalho branco, equilibrado por espelhos em arco e iluminação de
+                nicho integrada.</p>
+              <button class="project-card__btn" type="button" data-view-gallery data-i18n="projects.viewGallery">Ver Galeria</button>
             </div>
           </article>
         </div>
@@ -208,8 +256,8 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <span class="section-tag section-tag--center">Get In Touch</span>
-    <h2 class="section-title">Let's Create Together</h2>
+    <span class="section-tag section-tag--center" data-i18n="contact.tag">Fale Comigo</span>
+    <h2 class="section-title" data-i18n="contact.title">Vamos Criar Juntos</h2>
     <div class="section-line section-line--center"></div>
     <div class="contact__links">
       <a class="contact__link" href="https://www.instagram.com/gabibervian.design" target="_blank" rel="noopener">
@@ -234,7 +282,7 @@
         contato@gabibervian.design
       </a>
     </div>
-    <p class="contact__sub">Available for freelance collaborations &amp; design partnerships worldwide.</p>
+    <p class="contact__sub" data-i18n="contact.sub">Disponível para colaborações freelance e parcerias de design em todo o mundo.</p>
   </section>
 
   <!-- PROJECT IMAGE VIEWER -->

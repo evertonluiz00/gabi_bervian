@@ -28,8 +28,7 @@
         <a href="#projects" data-i18n="nav.projects">Projetos</a>
         <a href="#contact" data-i18n="nav.contact">Contato</a>
       </nav>
-      <button class="navbar__lang" id="langToggle" type="button" data-target="en"
-        aria-label="Ver site em inglês">
+      <button class="navbar__lang" id="langToggle" type="button" data-target="en" aria-label="Ver site em inglês">
         <svg class="navbar__lang-flag navbar__lang-flag--br" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
           <clipPath id="flagBrGlobe">
             <circle cx="14" cy="10" r="4.4" />
@@ -86,10 +85,12 @@
     <div class="hero__content">
       <h1 class="hero__name">GABI BERVIAN</h1>
       <p class="hero__title" data-i18n="hero.title">Designer de Interiores</p>
-      <p class="hero__tagline" data-i18n-html="hero.tagline">Projetando espaços com precisão.<br> Criando lares com alma.</p>
+      <p class="hero__tagline" data-i18n-html="hero.tagline">Projetando espaços com precisão.<br> Criando lares com
+        alma.</p>
       <div class="hero__divider"></div>
     </div>
-    <a href="#about" class="hero__scroll" aria-label="Rolar para baixo"><span data-i18n-html="hero.scroll">&#8595; Rolar</span></a>
+    <a href="#about" class="hero__scroll" aria-label="Rolar para baixo"><span data-i18n-html="hero.scroll">&#8595;
+        Rolar</span></a>
   </section>
 
   <!-- ABOUT ME -->
@@ -103,18 +104,22 @@
         <span class="section-tag" data-i18n="about.tag">Sobre Mim</span>
         <h2 data-i18n="about.title">Transformando ideias em realidade construível</h2>
         <div class="section-line"></div>
-        <p data-i18n="about.p1">Sou uma Designer de Interiores dedicada a transformar ideias em espaços não apenas bonitos, mas
+        <p data-i18n="about.p1">Sou uma Designer de Interiores dedicada a transformar ideias em espaços não apenas
+          bonitos, mas
           significativos, funcionais e profundamente conectados às pessoas que os vivenciam. Inspirado pelos princípios
           da Neuroarquitetura, meu trabalho explora como decisões de design bem pensadas podem influenciar emoções,
           bem-estar e o modo como vivemos dentro de um espaço.</p>
-        <p data-i18n="about.p2">Colaboro com estúdios de design de interiores e equipes criativas para conectar a jornada entre a visão e
+        <p data-i18n="about.p2">Colaboro com estúdios de design de interiores e equipes criativas para conectar a
+          jornada entre a visão e
           a realidade — transformando conceitos em soluções detalhadas, organizadas e construíveis. Meu papel é trazer
           clareza ao processo de design, garantindo que cada elemento, da atmosfera geral ao menor detalhe, seja
           cuidadosamente considerado e intencionalmente desenvolvido.</p>
-        <p data-i18n="about.p3">Com uma base sólida em detalhamento técnico e narrativa visual, crio documentações de design precisas e
+        <p data-i18n="about.p3">Com uma base sólida em detalhamento técnico e narrativa visual, crio documentações de
+          design precisas e
           experiências visuais realistas que permitem que cada projeto seja compreendido, refinado e trazido à vida com
           confiança.</p>
-        <p data-i18n="about.p4">Equilibrando criatividade, expertise técnica e uma perspectiva centrada no ser humano, acredito que
+        <p data-i18n="about.p4">Equilibrando criatividade, expertise técnica e uma perspectiva centrada no ser humano,
+          acredito que
           interiores excepcionais nascem quando ideias bonitas são sustentadas por uma execução cuidadosa — resultando
           em espaços que realmente refletem as pessoas para quem foram projetados.</p>
       </div>
@@ -134,7 +139,8 @@
           <div class="service-slide__overlay"></div>
           <div class="service-slide__content">
             <h3>FF&amp;E</h3>
-            <p data-i18n="services.ffe">Móveis, Acessórios e Equipamentos — seleções curadas alinhadas à visão estética, orçamento e
+            <p data-i18n="services.ffe">Móveis, Acessórios e Equipamentos — seleções curadas alinhadas à visão estética,
+              orçamento e
               necessidades funcionais de cada projeto. De moodboards a planilhas de especificação detalhadas.</p>
           </div>
         </div>
@@ -144,7 +150,8 @@
           <div class="service-slide__overlay"></div>
           <div class="service-slide__content">
             <h3 data-i18n="services.constructionTitle">Documentos de Construção</h3>
-            <p data-i18n="services.construction">Desenhos técnicos e documentação precisos — plantas baixas, elevações, planos de forro refletido,
+            <p data-i18n="services.construction">Desenhos técnicos e documentação precisos — plantas baixas, elevações,
+              planos de forro refletido,
               detalhes de marcenaria — que trazem clareza e confiança a cada etapa da obra.</p>
           </div>
         </div>
@@ -154,7 +161,8 @@
           <div class="service-slide__overlay"></div>
           <div class="service-slide__content">
             <h3 data-i18n="services.vizTitle">Visualização 3D</h3>
-            <p data-i18n="services.viz">Modelos tridimensionais realistas que transformam conceitos em experiências espaciais imersivas —
+            <p data-i18n="services.viz">Modelos tridimensionais realistas que transformam conceitos em experiências
+              espaciais imersivas —
               permitindo que clientes e equipes explorem totalmente o design antes do início da construção.</p>
           </div>
         </div>
@@ -172,85 +180,102 @@
     <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
     <div class="section-line section-line--center"></div>
 
-    <div class="carousel carousel--projects" data-carousel>
-      <div class="carousel__track">
+    <!-- Each card lists its gallery through data-folder / data-prefix / data-count:
+         the viewer builds images/projects/<folder>/<prefix>_01.png … _<count>.png -->
+    <div class="projects__grid">
 
-        <!-- KITCHEN -->
-        <div class="carousel__slide">
-          <article class="project-card" data-project tabindex="0" role="button"
-            aria-label="Ver galeria: A Cozinha Moderna com Herança" data-images='[
-              {"src":"images/projects/kitchen/04_kitchen_gallery.png","alt":"The Modern Heritage Kitchen"},
-              {"src":"images/projects/kitchen/03_kitchen_concept_moodboard.png","alt":"Kitchen concept moodboard"},
-              {"src":"images/projects/kitchen/05_kitchen_floorplan.png","alt":"Kitchen floor plan"},
-              {"src":"images/projects/kitchen/06_kitchen_elevation01_millwork_ffe.png","alt":"Kitchen elevation 01"},
-              {"src":"images/projects/kitchen/07_kitchen_elevation02_millwork_ffe.png","alt":"Kitchen elevation 02"},
-              {"src":"images/projects/kitchen/08_kitchen_island_millwork_specs.png","alt":"Kitchen island millwork specs"},
-              {"src":"images/projects/kitchen/09_kitchen_isometric_ffe.png","alt":"Kitchen isometric view"}
-            ]' style="background-image: url('images/projects/kitchen/project_kitchen_cover.png');">
-            <div class="project-card__overlay"></div>
-            <div class="project-card__content">
-              <h3 data-i18n="projects.kitchen.title">A Cozinha Moderna com Herança</h3>
-              <p data-i18n="projects.kitchen.desc">Projetada para um estilo de vida familiar vibrante, esta cozinha equilibra detalhes arquitetônicos
-                clássicos com funcionalidade moderna, com uma ilha generosa e eletrodomésticos integrados de alto
-                padrão.</p>
-              <button class="project-card__btn" type="button" data-view-gallery data-i18n="projects.viewGallery">Ver Galeria</button>
-            </div>
-          </article>
+      <article class="project-card" data-project data-folder="serenity-bedroom" data-prefix="serenity-bedroom"
+        data-count="7" tabindex="0" role="button" aria-label="Abrir galeria: Serenity Bedroom">
+        <div class="project-card__media">
+          <img src="images/projects/serenity-bedroom/serenity-bedroom_01.png" alt="Serenity Bedroom" loading="lazy">
         </div>
+        <h3 class="project-card__title">Serenity Bedroom</h3>
+      </article>
 
-        <!-- BEDROOM -->
-        <div class="carousel__slide">
-          <article class="project-card" data-project tabindex="0" role="button"
-            aria-label="Ver galeria: Suíte Principal Serena" data-images='[
-              {"src":"images/projects/bedroom/10_bedroom_quiet_luxury_intro.png","alt":"Serene Primary Suite"},
-              {"src":"images/projects/bedroom/11_bedroom_moodboard.png","alt":"Bedroom moodboard"},
-              {"src":"images/projects/bedroom/12_bedroom_floorplan.png","alt":"Bedroom floor plan"},
-              {"src":"images/projects/bedroom/13_bedroom_reflected_ceiling_plan.png","alt":"Bedroom reflected ceiling plan"},
-              {"src":"images/projects/bedroom/14_bedroom_lighting_plan.png","alt":"Bedroom lighting plan"},
-              {"src":"images/projects/bedroom/15_bedroom_elevations_millwork.png","alt":"Bedroom elevations"},
-              {"src":"images/projects/bedroom/16_bedroom_nightstand_millwork_specs.png","alt":"Nightstand millwork specs"},
-              {"src":"images/projects/bedroom/17_bedroom_closet_millwork_specs.png","alt":"Closet millwork specs"}
-            ]' style="background-image: url('images/projects/bedroom/project_bedroom_cover.png');">
-            <div class="project-card__overlay"></div>
-            <div class="project-card__content">
-              <h3 data-i18n="projects.bedroom.title">Suíte Principal Serena</h3>
-              <p data-i18n="projects.bedroom.desc">Um refúgio sofisticado e tranquilo que combina marcenaria clássica com linhas contemporâneas e limpas —
-                tons neutros e quentes, acabamentos em madeira ricos e iluminação em camadas criam uma atmosfera
-                acolhedora e elegante.</p>
-              <button class="project-card__btn" type="button" data-view-gallery data-i18n="projects.viewGallery">Ver Galeria</button>
-            </div>
-          </article>
+      <article class="project-card" data-project data-folder="wellness-bathroom" data-prefix="wellness-bathroom"
+        data-count="7" tabindex="0" role="button" aria-label="Abrir galeria: Wellness Bathroom">
+        <div class="project-card__media">
+          <img src="images/projects/wellness-bathroom/wellness-bathroom_01.png" alt="Wellness Bathroom" loading="lazy">
         </div>
+        <h3 class="project-card__title">Wellness Bathroom</h3>
+      </article>
 
-        <!-- BATHROOM -->
-        <div class="carousel__slide">
-          <article class="project-card" data-project tabindex="0" role="button"
-            aria-label="Ver galeria: O Banheiro Contemporâneo do Bem-Estar" data-images='[
-              {"src":"images/projects/bathroom/18_bathroom_gallery.png","alt":"The Contemporary Wellness Bathroom"},
-              {"src":"images/projects/bathroom/19_bathroom_color_palette.png","alt":"Bathroom color palette"},
-              {"src":"images/projects/bathroom/20_bathroom_floorplan.png","alt":"Bathroom floor plan"},
-              {"src":"images/projects/bathroom/21_bathroom_elevation01_ffe.png","alt":"Bathroom elevation 01"},
-              {"src":"images/projects/bathroom/22_bathroom_elevation02_ffe.png","alt":"Bathroom elevation 02"},
-              {"src":"images/projects/bathroom/23_bathroom_elevation03_ffe.png","alt":"Bathroom elevation 03"},
-              {"src":"images/projects/bathroom/24_bathroom_elevation04_ffe.png","alt":"Bathroom elevation 04"},
-              {"src":"images/projects/bathroom/25_bathroom_isometric01_ffe.png","alt":"Bathroom isometric view 01"},
-              {"src":"images/projects/bathroom/26_bathroom_isometric02_ffe.png","alt":"Bathroom isometric view 02"}
-            ]' style="background-image: url('images/projects/bathroom/project_bathroom_cover.png');">
-            <div class="project-card__overlay"></div>
-            <div class="project-card__content">
-              <h3 data-i18n="projects.bathroom.title">O Banheiro Contemporâneo do Bem-Estar</h3>
-              <p data-i18n="projects.bathroom.desc">Um refúgio inspirado em spa que prioriza o bem-estar e a quietude visual por meio de uma paleta suave e
-                monocromática e texturas naturais de carvalho branco, equilibrado por espelhos em arco e iluminação de
-                nicho integrada.</p>
-              <button class="project-card__btn" type="button" data-view-gallery data-i18n="projects.viewGallery">Ver Galeria</button>
-            </div>
-          </article>
+      <article class="project-card" data-project data-folder="heritage-modern-kitchen" data-prefix="heritage_kitchen"
+        data-count="6" tabindex="0" role="button" aria-label="Abrir galeria: Heritage Modern Kitchen">
+        <div class="project-card__media">
+          <img src="images/projects/heritage-modern-kitchen/heritage_kitchen_01.png" alt="Heritage Modern Kitchen"
+            loading="lazy">
         </div>
+        <h3 class="project-card__title">Heritage Modern Kitchen</h3>
+      </article>
 
-      </div>
-      <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="Anterior">&#8249;</button>
-      <button class="carousel__arrow carousel__arrow--next" data-next aria-label="Próximo">&#8250;</button>
-      <div class="carousel__dots" data-dots></div>
+      <article class="project-card" data-project data-folder="mid-century-bedroom" data-prefix="mid-century-bedroom"
+        data-count="5" tabindex="0" role="button" aria-label="Abrir galeria: Mid Century Bedroom">
+        <div class="project-card__media">
+          <img src="images/projects/mid-century-bedroom/mid-century-bedroom_01.png" alt="Mid Century Bedroom"
+            loading="lazy">
+        </div>
+        <h3 class="project-card__title">Mid Century Bedroom</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="mid-century-dining" data-prefix="mid-century-dining"
+        data-count="6" tabindex="0" role="button" aria-label="Abrir galeria: Mid Century Dining">
+        <div class="project-card__media">
+          <img src="images/projects/mid-century-dining/mid-century-dining_01.png" alt="Mid Century Dining"
+            loading="lazy">
+        </div>
+        <h3 class="project-card__title">Mid Century Dining</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="mid-century-living" data-prefix="mid-century-living"
+        data-count="12" tabindex="0" role="button" aria-label="Abrir galeria: Mid Century Living">
+        <div class="project-card__media">
+          <img src="images/projects/mid-century-living/mid-century-living_01.png" alt="Mid Century Living"
+            loading="lazy">
+        </div>
+        <h3 class="project-card__title">Mid Century Living</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="farmhouse-bedroom" data-prefix="farmhouse_bedroom"
+        data-count="12" tabindex="0" role="button" aria-label="Abrir galeria: Farmhouse Bedroom">
+        <div class="project-card__media">
+          <img src="images/projects/farmhouse-bedroom/farmhouse_bedroom_01.png" alt="Farmhouse Bedroom" loading="lazy">
+        </div>
+        <h3 class="project-card__title">Farmhouse Bedroom</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="lemon-kitchen" data-prefix="lemon kitchen" data-count="18"
+        tabindex="0" role="button" aria-label="Abrir galeria: Lemon Kitchen">
+        <div class="project-card__media">
+          <img src="images/projects/lemon-kitchen/lemon%20kitchen_01.png" alt="Lemon Kitchen" loading="lazy">
+        </div>
+        <h3 class="project-card__title">Lemon Kitchen</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="alma-store" data-prefix="alma_store" data-count="7"
+        tabindex="0" role="button" aria-label="Abrir galeria: Alma Store">
+        <div class="project-card__media">
+          <img src="images/projects/alma-store/alma_store_01.png" alt="Alma Store" loading="lazy">
+        </div>
+        <h3 class="project-card__title">Alma Store</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="apto-boho" data-prefix="apto_boho" data-count="6"
+        tabindex="0" role="button" aria-label="Abrir galeria: Apto Boho">
+        <div class="project-card__media">
+          <img src="images/projects/apto-boho/apto_boho_01.png" alt="Apto Boho" loading="lazy">
+        </div>
+        <h3 class="project-card__title">Apto Boho</h3>
+      </article>
+
+      <article class="project-card" data-project data-folder="apto-living-360" data-prefix="apto_living_360"
+        data-count="8" tabindex="0" role="button" aria-label="Abrir galeria: Apto Living 360">
+        <div class="project-card__media">
+          <img src="images/projects/apto-living-360/apto_living_360_01.png" alt="Apto Living 360" loading="lazy">
+        </div>
+        <h3 class="project-card__title">Apto Living 360</h3>
+      </article>
+
     </div>
   </section>
 
@@ -282,7 +307,8 @@
         contato@gabibervian.design
       </a>
     </div>
-    <p class="contact__sub" data-i18n="contact.sub">Disponível para colaborações freelance e parcerias de design em todo o mundo.</p>
+    <p class="contact__sub" data-i18n="contact.sub">Disponível para colaborações freelance e parcerias de design em todo
+      o mundo.</p>
   </section>
 
   <!-- PROJECT IMAGE VIEWER -->

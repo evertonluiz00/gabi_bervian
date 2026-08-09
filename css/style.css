@@ -366,84 +366,77 @@ a { text-decoration: none; color: inherit; }
 /* ===== PROJECTS ===== */
 .projects { padding: var(--section-pad); background: var(--off-white); }
 
-.carousel--projects {
-  max-width: 680px;
+.projects__grid {
+  max-width: 1120px;
   margin: 0 auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1.8rem;
 }
 
 .project-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card__media {
   position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4 / 3;
+  background: var(--beige);
+  box-shadow: 0 10px 30px rgba(28, 63, 96, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card__media img {
   width: 100%;
   height: 100%;
-  border-radius: 4px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(28, 63, 96, 0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 63, 96, 0);
+  transition: background 0.3s ease;
 }
 
 .project-card:hover,
 .project-card:focus-visible {
-  box-shadow: 0 16px 40px rgba(28, 63, 96, 0.16);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   outline: none;
 }
 
-.project-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(28,63,96,0.1) 100%);
+.project-card:hover .project-card__media,
+.project-card:focus-visible .project-card__media {
+  box-shadow: 0 16px 40px rgba(28, 63, 96, 0.18);
 }
 
-.project-card__content {
-  position: relative;
-  z-index: 2;
-  color: var(--off-white);
-  padding: 2.2rem 2.5rem;
-  text-align: left;
-  max-width: 520px;
+.project-card:hover .project-card__media img,
+.project-card:focus-visible .project-card__media img {
+  transform: scale(1.05);
 }
 
-.project-card__content h3 {
-  color: var(--off-white);
-  font-size: 0.85rem;
-  letter-spacing: 0.22em;
+.project-card:hover .project-card__media::after,
+.project-card:focus-visible .project-card__media::after {
+  background: rgba(28, 63, 96, 0.12);
+}
+
+.project-card:focus-visible .project-card__media {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+.project-card__title {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin: 0 0 0.7rem;
-}
-
-.project-card__content p {
-  font-size: 0.9rem;
-  color: var(--beige);
-}
-
-.project-card__btn {
-  display: inline-block;
-  margin-top: 1.1rem;
-  background: rgba(247, 247, 247, 0.12);
-  border: 1px solid rgba(175, 193, 208, 0.4);
-  color: var(--off-white);
-  font-family: var(--font-title);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card__btn:hover,
-.project-card__btn:focus-visible {
-  background: rgba(247, 247, 247, 0.25);
-  border-color: var(--light-blue);
-  outline: none;
+  color: var(--navy);
 }
 
 /* ===== PROJECT IMAGE VIEWER (LIGHTBOX) ===== */
@@ -648,7 +641,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .about__inner { grid-template-columns: 1fr; text-align: center; }
   .about__image { max-width: 320px; margin: 0 auto; }
-  .carousel--projects { max-width: 100%; }
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 700px) {
@@ -666,8 +659,8 @@ a { text-decoration: none; color: inherit; }
   .navbar__menu.is-open { display: flex; }
   .navbar__toggle { display: flex; }
   .service-slide__content { padding: 1.4rem 1.6rem; }
-  .carousel--service,
-  .carousel--projects { aspect-ratio: 3 / 4; }
+  .carousel--service { aspect-ratio: 3 / 4; }
+  .projects__grid { grid-template-columns: 1fr; max-width: 420px; gap: 2.2rem; }
   .hero__tagline { font-size: 1.15rem; }
   .lightbox { padding: 1rem; }
   .lightbox__arrow { width: 38px; height: 38px; font-size: 1.3rem; margin: 0 0.6rem; }

@@ -36,18 +36,6 @@ const translations = {
       + '— allowing clients and teams to fully explore the design before construction begins.',
     'projects.tag': 'Portfolio',
     'projects.title': 'Projects',
-    'projects.viewGallery': 'View Gallery',
-    'projects.kitchen.title': 'The Modern Heritage Kitchen',
-    'projects.kitchen.desc': 'Designed for a vibrant family lifestyle, this kitchen strikes a balance between classic '
-      + 'architectural details and modern functionality, featuring a generous island and integrated high-end '
-      + 'appliances.',
-    'projects.bedroom.title': 'Serene Primary Suite',
-    'projects.bedroom.desc': 'A sophisticated, calming retreat pairing classic millwork with clean, contemporary '
-      + 'lines — warm neutral tones, rich wood accents and layered lighting create an inviting, elegant atmosphere.',
-    'projects.bathroom.title': 'The Contemporary Wellness Bathroom',
-    'projects.bathroom.desc': 'A spa-like retreat that prioritizes wellness and visual quietude through a soft, '
-      + 'monochromatic palette and natural white oak textures, balanced by arched mirrors and integrated niche '
-      + 'lighting.',
     'contact.tag': 'Get In Touch',
     'contact.title': 'Let\'s Create Together',
     'contact.sub': 'Available for freelance collaborations & design partnerships worldwide.',
@@ -200,7 +188,14 @@ function lightboxGoTo(i) {
 }
 
 document.querySelectorAll('[data-project]').forEach(card => {
-  const images = JSON.parse(card.dataset.images);
+  const { folder, prefix, count } = card.dataset;
+  const title = card.querySelector('.project-card__title').textContent.trim();
+
+  // images are numbered <prefix>_01.png … <prefix>_<count>.png inside the project folder
+  const images = Array.from({ length: Number(count) }, (_, i) => ({
+    src: encodeURI(`images/projects/${folder}/${prefix}_${String(i + 1).padStart(2, '0')}.png`),
+    alt: title,
+  }));
 
   card.addEventListener('click', () => openLightbox(images, 0));
   card.addEventListener('keydown', (e) => {

@@ -164,9 +164,9 @@ document.querySelectorAll('[data-project]').forEach(card => {
   const { folder, prefix, count } = card.dataset;
   const title = card.querySelector('.project-card__title').textContent.trim();
 
-  // images are numbered <prefix>_01.png … <prefix>_<count>.png inside the project folder
+  // images are numbered <prefix>_01.webp … <prefix>_<count>.webp inside the project folder
   const images = Array.from({ length: Number(count) }, (_, i) => ({
-    src: encodeURI(`images/projects/${folder}/${prefix}_${String(i + 1).padStart(2, '0')}.png`),
+    src: encodeURI(`images/projects/${folder}/${prefix}_${String(i + 1).padStart(2, '0')}.webp`),
     alt: title,
   }));
 

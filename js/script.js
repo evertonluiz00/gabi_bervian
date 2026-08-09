@@ -183,8 +183,39 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightboxPrev.addEventListener('click', () => lightboxGoTo(lightboxIndex - 1));
 lightboxNext.addEventListener('click', () => lightboxGoTo(lightboxIndex + 1));
 
+// swipe left/right to move between images on touch devices
+const SWIPE_MIN = 45;
+let touchStartX = 0;
+let touchStartY = 0;
+let tracking = false;
+let swiped = false;
+
 lightbox.addEventListener('click', (e) => {
+  if (swiped) return; // a swipe that ends on the backdrop must not close the viewer
   if (e.target === lightbox) closeLightbox();
+});
+
+lightbox.addEventListener('touchstart', (e) => {
+  // a second finger means pinch-zoom, not a swipe
+  tracking = e.touches.length === 1;
+  if (!tracking) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  swiped = false;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+  if (!tracking) return;
+  tracking = false;
+
+  const deltaX = e.changedTouches[0].clientX - touchStartX;
+  const deltaY = e.changedTouches[0].clientY - touchStartY;
+
+  // horizontal intent only, so a vertical drag never changes the image
+  if (Math.abs(deltaX) < SWIPE_MIN || Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+  swiped = true;
+  lightboxGoTo(lightboxIndex + (deltaX < 0 ? 1 : -1));
 });
 
 document.addEventListener('keydown', (e) => {

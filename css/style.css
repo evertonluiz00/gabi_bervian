@@ -450,6 +450,10 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   background: rgba(0, 0, 0, 0.9);
   padding: 2rem;
+  /* keeps horizontal swipes for the gallery while vertical pan and pinch-zoom stay native */
+  touch-action: pan-y pinch-zoom;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .lightbox.is-open { display: flex; }
